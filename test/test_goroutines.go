@@ -18,7 +18,7 @@ func readLines(path string) ([]string, error) {
 		return nil, err
 	}
 	defer file.Close()
-
+	//я это делаю, чтобы провнерить блядский git которым я не умею пользоваться
 	var lines []string
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
@@ -50,6 +50,6 @@ func main() {
 		text := ("(NULL," + strconv.Itoa(ip) + ",'geocol-" + strconv.Itoa(i+2) + "'" + "," + "'" + string(line) + "'" + ",' ',NULL,1,1641,992,8242,0,0,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),")
 		fmt.Println(text)
 		ip++
-		
+
 	}
 }
